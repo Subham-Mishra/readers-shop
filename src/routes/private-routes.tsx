@@ -2,6 +2,7 @@ import type { RouteObject } from "react-router-dom";
 import Dashboard from "~/pages/Dashboard";
 import AuthorsPage from "~/pages/Dashboard/Authors";
 import BooksPage from "~/pages/Dashboard/Books";
+import BookDetails from "~/components/BookDetails";
 import HomePage from "~/pages/Dashboard/Home";
 
 export const privateRoutes: Array<RouteObject> = [
@@ -18,8 +19,8 @@ export const privateRoutes: Array<RouteObject> = [
         element: <BooksPage />,
       },
       {
-        path: "books/:id",
-        element: <h1>Book Details</h1>,
+        path: "books/:bookId",
+        element: <BookDetails />,
       },
       {
         path: "authors",
