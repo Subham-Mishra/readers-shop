@@ -5,7 +5,7 @@ import books from "~/data/books";
 const AuthorsPage: React.FC = () => {
   const distinctAuthors = [...new Set(books.map((book) => book.author))];
   return (
-    <div className="py-4 px-12 bg-orange-300 h-[calc(100vh-4rem)] overflow-y-auto">
+    <div className="py-4 px-12 bg-orange-400 h-[calc(100vh-4rem)] overflow-y-auto">
       <div className="flex items-center justify-between mb-4">
         <h1 className="text-3xl font-semibold">Associated Authors</h1>
       </div>

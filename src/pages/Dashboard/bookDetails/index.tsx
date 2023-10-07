@@ -3,11 +3,12 @@ import { Book } from "~/iterfaces";
 import { FaCartPlus } from "react-icons/fa";
 import { useParams } from "react-router-dom";
 import books from "~/data/books";
+import { useShoppingCart } from "~/hooks/useCart";
 
 const BookDetails: React.FC = () => {
-  const [cart, setCart] = useState<Book[]>([]);
   const [selectedBook, setSelectedBook] = useState<Book>();
   let { bookId } = useParams();
+  const { cart, addToCart, isBookInCart } = useShoppingCart();
 
   useEffect(() => {
     if (bookId) {
@@ -16,17 +17,17 @@ const BookDetails: React.FC = () => {
     }
   }, [bookId]);
 
-  if (!selectedBook) return <></>;
-
-  const addToCart = () => {
-    selectedBook && setCart([...cart, selectedBook]);
+  const addToCartHandler = () => {
+    selectedBook && addToCart(selectedBook.id);
   };
 
-  const { coverImageLink, name, details, author, genre, publicationDate } =
+  if (!selectedBook) return <></>;
+
+  const { id, coverImageLink, name, details, author, genre, publicationDate } =
     selectedBook;
 
   return (
-    <div className="h-[calc(100vh-4rem)] p-4 bg-orange-300">
+    <div className="h-[calc(100vh-4rem)] p-4 bg-orange-400">
       <div className="max-w-3xl mx-auto flex space-x-4">
         <div className="w-1/2">
           <img src={coverImageLink} alt={name} className="w-full" />
@@ -37,12 +38,21 @@ const BookDetails: React.FC = () => {
           <p className="mb-4">{details}</p>
           <p>Genre: {genre}</p>
           <p>Publication Date: {publicationDate}</p>
-          <button
-            onClick={addToCart}
-            className="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 focus:outline-none"
-          >
-            Add to Cart <FaCartPlus className="inline-block ml-2" />
-          </button>
+          {isBookInCart(id) ? (
+            <button
+              disabled
+              className="mt-4 bg-gray-900 text-white px-4 py-2 rounded"
+            >
+              Added to Cart!
+            </button>
+          ) : (
+            <button
+              onClick={addToCartHandler}
+              className="mt-4 bg-gray-900 text-white px-4 py-2 rounded hover:bg-gray-600 focus:outline-none"
+            >
+              Add to Cart <FaCartPlus className="inline-block ml-2" />
+            </button>
+          )}
         </div>
       </div>
     </div>

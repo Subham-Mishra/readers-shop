@@ -16,6 +16,7 @@ const books: Book[] = [
     details:
       "A classic novel set in the Roaring Twenties, exploring themes of wealth, love, and the American Dream.",
     genre: "Fiction",
+    price: 250,
   },
   {
     id: generateRandomId(),
@@ -28,6 +29,7 @@ const books: Book[] = [
     details:
       "Set in the American South during the 1930s, this novel deals with racial injustice and moral growth.",
     genre: "Fiction",
+    price: 450,
   },
   {
     id: generateRandomId(),
@@ -40,6 +42,7 @@ const books: Book[] = [
     details:
       "A dystopian novel that explores surveillance, propaganda, and totalitarianism in a bleak future society.",
     genre: "Fiction",
+    price: 150,
   },
   {
     id: generateRandomId(),
@@ -52,6 +55,7 @@ const books: Book[] = [
     details:
       "A classic romance novel set in 19th-century England, focusing on social class and relationships.",
     genre: "Romance",
+    price: 520,
   },
   {
     id: generateRandomId(),
@@ -64,6 +68,7 @@ const books: Book[] = [
     details:
       "A coming-of-age novel following the adventures of Holden Caulfield in New York City.",
     genre: "Fiction",
+    price: 210,
   },
   {
     id: generateRandomId(),
@@ -76,6 +81,7 @@ const books: Book[] = [
     details:
       "The first book in the Harry Potter series, introducing the young wizard's journey at Hogwarts.",
     genre: "Fantasy",
+    price: 780,
   },
   {
     id: generateRandomId(),
@@ -88,6 +94,7 @@ const books: Book[] = [
     details:
       "A fantasy novel following Bilbo Baggins on a quest to reclaim treasure guarded by a dragon.",
     genre: "Fantasy",
+    price: 120,
   },
   {
     id: generateRandomId(),
@@ -100,6 +107,7 @@ const books: Book[] = [
     details:
       "The first book in a dystopian series where teenagers fight to the death in a televised competition.",
     genre: "Fiction",
+    price: 420,
   },
   {
     id: generateRandomId(),
@@ -111,6 +119,7 @@ const books: Book[] = [
     details:
       "A philosophical novel about a shepherd's journey to discover his personal legend.",
     genre: "Fiction",
+    price: 340,
   },
   {
     id: generateRandomId(),
@@ -123,6 +132,7 @@ const books: Book[] = [
     details:
       "A horror novel about a family's winter stay at a haunted hotel, leading to madness and terror.",
     genre: "Horror",
+    price: 620,
   },
   {
     id: generateRandomId(),
@@ -135,6 +145,7 @@ const books: Book[] = [
     details:
       "A dystopian novel depicting a futuristic society controlled by technology and conditioning.",
     genre: "Fiction",
+    price: 245,
   },
   {
     id: generateRandomId(),
@@ -147,6 +158,7 @@ const books: Book[] = [
     details:
       "An epic fantasy trilogy following Frodo's quest to destroy the One Ring and save Middle-earth.",
     genre: "Fantasy",
+    price: 535,
   },
   {
     id: generateRandomId(),
@@ -158,6 +170,7 @@ const books: Book[] = [
     details:
       "A Gothic novel telling the story of Jane Eyre, an orphan who becomes a governess.",
     genre: "Fiction",
+    price: 295,
   },
   {
     id: generateRandomId(),
@@ -170,6 +183,7 @@ const books: Book[] = [
     details:
       "A thriller novel unraveling mysteries related to art, religion, and history.",
     genre: "Thriller",
+    price: 580,
   },
   {
     id: generateRandomId(),
@@ -182,6 +196,7 @@ const books: Book[] = [
     details:
       "An epic novel about Captain Ahab's obsessive pursuit of the great white whale.",
     genre: "Adventure",
+    price: 960,
   },
   {
     id: generateRandomId(),
@@ -194,6 +209,7 @@ const books: Book[] = [
     details:
       "A post-apocalyptic novel following a father and son's journey through a desolate world.",
     genre: "Fiction",
+    price: 875,
   },
   {
     id: generateRandomId(),
@@ -206,6 +222,7 @@ const books: Book[] = [
     details:
       "A fantasy series featuring adventures in the magical land of Narnia.",
     genre: "Fantasy",
+    price: 250,
   },
   {
     id: generateRandomId(),
@@ -218,6 +235,7 @@ const books: Book[] = [
     details:
       "A magical realist novel tracing the history of the Buendía family in Macondo.",
     genre: "Realism",
+    price: 150,
   },
   {
     id: generateRandomId(),
@@ -230,6 +248,7 @@ const books: Book[] = [
     details:
       "A self-help book exploring the path to personal growth and fulfillment.",
     genre: "Self-Help",
+    price: 475,
   },
   {
     id: generateRandomId(),
@@ -242,6 +261,7 @@ const books: Book[] = [
     details:
       "A science fiction novel about an astronaut stranded on Mars, trying to survive and find a way back to Earth.",
     genre: "Fiction",
+    price: 160,
   },
   {
     id: generateRandomId(),
@@ -254,6 +274,7 @@ const books: Book[] = [
     details:
       "A science fiction epic set in a distant future, with political intrigue and desert planets.",
     genre: "Fiction",
+    price: 285,
   },
   {
     id: generateRandomId(),
@@ -266,6 +287,7 @@ const books: Book[] = [
     details:
       "An ancient Greek epic poem that follows the adventures of Odysseus on his journey home from the Trojan War.",
     genre: "Poetry",
+    price: 150,
   },
 ];
 

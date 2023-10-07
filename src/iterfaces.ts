@@ -7,4 +7,11 @@ export interface Book {
   coverImageLink: string;
   details: string;
   genre: string;
+  price: number;
 }
+
+export interface CartItem {
+  bookId: string;
+  quantity: number;
+}
+

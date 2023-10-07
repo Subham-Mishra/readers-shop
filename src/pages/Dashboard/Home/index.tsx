@@ -12,7 +12,7 @@ const HomePage: React.FC = () => {
   }, []);
 
   return (
-    <div className="bg-orange-300 h-[calc(100vh-4rem)] flex justify-between items-center">
+    <div className="bg-orange-400 h-[calc(100vh-4rem)] flex justify-between items-center">
       <div className="text-center pl-8">
         <h1 className="text-4xl font-bold">Hola! Welcome to Readers Shop</h1>
         <Link to="books" className="text-gray-700 flex gap-2 cursor-pointer">
@@ -35,9 +35,11 @@ const HomePage: React.FC = () => {
             <p className="text-gray-600">
               {featuredBook?.details.slice(0, 60) + "..."}
             </p>
-            <button className="bg-gray-900 text-white px-4 py-2 mt-2 rounded hover:bg-gray-700">
-              View More Details
-            </button>
+            <Link to={`books/${featuredBook?.id}`}>
+              <button className="bg-gray-900 text-white px-4 py-2 mt-2 rounded hover:bg-gray-700">
+                View More Details
+              </button>
+            </Link>
           </div>
         </div>
       </div>

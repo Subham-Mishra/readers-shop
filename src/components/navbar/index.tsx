@@ -1,9 +1,20 @@
 import { PiBookBookmarkFill } from "react-icons/pi";
 import { BiLogOut } from "react-icons/bi";
 import { AiOutlineShoppingCart } from "react-icons/ai";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { ACCESS_TOKEN_KEY, ID, ROLE, USER } from "~/lib/constants";
 
 const Navbar = () => {
+  const navigate = useNavigate();
+
+  const handleLogout = (): void => {
+    localStorage.removeItem(ACCESS_TOKEN_KEY);
+    localStorage.removeItem(USER);
+    localStorage.removeItem(ROLE);
+    localStorage.removeItem(ID);
+    navigate("/");
+  };
+
   return (
     <nav className="border-gray-200 bg-gray-900 h-[4rem]">
       <div className="flex items-center justify-between p-4">
@@ -52,12 +63,12 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link
-                to="#"
-                className="py-2 pl-3 pr-4 flex gap-1 items-center text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-700 md:p-0 dark:text-white md:dark:hover:text-orange-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+              <div
+                onClick={handleLogout}
+                className="cursor-pointer py-2 pl-3 pr-4 flex gap-1 items-center text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-700 md:p-0 dark:text-white md:dark:hover:text-orange-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
               >
                 <BiLogOut className="h-5 w-5" /> Logout
-              </Link>
+              </div>
             </li>
           </ul>
         </div>

@@ -1,7 +1,7 @@
 import type { RouteObject } from "react-router-dom";
 import ProtectedRoutes from "~/features/Authentication/ProtectedRoute";
 import AuthPage from "../features/Authentication";
-import ErrorPage from "../pages/ErrorPage";
+import ErrorPage from "../pages/errorPage";
 
 export const publicRoutes: Array<RouteObject> = [
   {
