@@ -4,18 +4,18 @@ import AuthPage from "../features/Authentication";
 import ErrorPage from "../pages/ErrorPage";
 
 export const publicRoutes: Array<RouteObject> = [
-	{
-		path: "/",
-		element: <ProtectedRoutes type="public" />,
-		children: [
-			{
-				index: true,
-				element: <AuthPage />,
-			},
-			{
-				path: "*",
-				element: <ErrorPage />,
-			},
-		],
-	},
+  {
+    path: "/",
+    element: <ProtectedRoutes type="public" />,
+    children: [
+      {
+        index: true,
+        element: <AuthPage />,
+      },
+      {
+        path: "*",
+        element: <ErrorPage />,
+      },
+    ],
+  },
 ];

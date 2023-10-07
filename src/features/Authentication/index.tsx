@@ -13,7 +13,7 @@ const AuthPage: React.FC = (): JSX.Element => {
     <div className="grid h-screen grid-cols-2">
       <section className="grid place-content-center gap-y-8 bg-black text-white">
         <p className="text-center text-xl font-medium leading-7">
-          readers-shop
+          Readers shop
         </p>
       </section>
       <section className="grid place-content-center gap-4 bg-white text-sm font-medium leading-4">
