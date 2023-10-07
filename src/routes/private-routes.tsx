@@ -1,5 +1,7 @@
 import type { RouteObject } from "react-router-dom";
 import Dashboard from "~/pages/Dashboard";
+import BooksPage from "~/pages/Dashboard/Books";
+import HomePage from "~/pages/Dashboard/Home";
 
 export const privateRoutes: Array<RouteObject> = [
   {
@@ -7,8 +9,12 @@ export const privateRoutes: Array<RouteObject> = [
     element: <Dashboard />,
     children: [
       {
+        path: "",
+        element: <HomePage />,
+      },
+      {
         path: "books",
-        element: <h1>Books</h1>,
+        element: <BooksPage />,
       },
       {
         path: "books/:id",

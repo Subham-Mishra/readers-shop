@@ -5,4 +5,5 @@ export interface Book {
   publicationDate: string;
   coverImageLink: string;
   details: string;
+  genre: string;
 }

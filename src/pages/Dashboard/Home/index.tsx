@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+import { HiArrowNarrowRight } from "react-icons/hi";
+import { Link } from "react-router-dom";
 import books from "~/data/books.ts";
 import { Book } from "~/iterfaces";
 
@@ -13,9 +15,10 @@ const HomePage: React.FC = () => {
     <div className="bg-orange-300 h-[calc(100vh-4rem)] flex justify-between items-center">
       <div className="text-center pl-8">
         <h1 className="text-4xl font-bold">Hola! Welcome to Readers Shop</h1>
-        <p className="text-gray-800 opacity-50">
-          Discover your next great read with us!
-        </p>
+        <Link to="books" className="text-gray-700 flex gap-2 cursor-pointer">
+          Discover your next great read with us{" "}
+          <HiArrowNarrowRight className="h-6 w-5" />
+        </Link>
       </div>
       <div className="">
         <h2 className="text-2xl font-semibold mb-4">Featured Book</h2>
@@ -32,7 +35,7 @@ const HomePage: React.FC = () => {
             <p className="text-gray-600">
               {featuredBook?.details.slice(0, 60) + "..."}
             </p>
-            <button className="bg-blue-500 text-white px-4 py-2 mt-2 rounded hover:bg-blue-600">
+            <button className="bg-gray-900 text-white px-4 py-2 mt-2 rounded hover:bg-gray-700">
               View More Details
             </button>
           </div>

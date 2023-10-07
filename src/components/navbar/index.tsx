@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav className="bg-white border-gray-200 dark:bg-gray-900 h-[4rem]">
+    <nav className="border-gray-200 bg-gray-900 h-[4rem]">
       <div className="flex items-center justify-between p-4">
         <Link to="/" className="flex items-center gap-2">
           <PiBookBookmarkFill className="h-6 w-6 text-orange-500" />
