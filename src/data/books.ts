@@ -1,7 +1,12 @@
 import { Book } from "~/iterfaces";
 
+function generateRandomId(): string {
+  return Math.random().toString(36).slice(2, 10);
+}
+
 const books: Book[] = [
   {
+    id: generateRandomId(),
     isFeatured: true,
     name: "The Great Gatsby",
     author: "F. Scott Fitzgerald",
@@ -13,6 +18,7 @@ const books: Book[] = [
     genre: "Fiction",
   },
   {
+    id: generateRandomId(),
     isFeatured: false,
     name: "To Kill a Mockingbird",
     author: "Harper Lee",
@@ -24,6 +30,7 @@ const books: Book[] = [
     genre: "Fiction",
   },
   {
+    id: generateRandomId(),
     isFeatured: false,
     name: "1984",
     author: "George Orwell",
@@ -35,6 +42,7 @@ const books: Book[] = [
     genre: "Fiction",
   },
   {
+    id: generateRandomId(),
     isFeatured: false,
     name: "Pride and Prejudice",
     author: "Jane Austen",
@@ -46,6 +54,7 @@ const books: Book[] = [
     genre: "Romance",
   },
   {
+    id: generateRandomId(),
     isFeatured: false,
     name: "The Catcher in the Rye",
     author: "J.D. Salinger",
@@ -57,6 +66,7 @@ const books: Book[] = [
     genre: "Fiction",
   },
   {
+    id: generateRandomId(),
     isFeatured: false,
     name: "Harry Potter and the Sorcerer's Stone",
     author: "J.K. Rowling",
@@ -68,6 +78,7 @@ const books: Book[] = [
     genre: "Fantasy",
   },
   {
+    id: generateRandomId(),
     isFeatured: false,
     name: "The Hobbit",
     author: "J.R.R. Tolkien",
@@ -79,6 +90,7 @@ const books: Book[] = [
     genre: "Fantasy",
   },
   {
+    id: generateRandomId(),
     isFeatured: false,
     name: "The Hunger Games",
     author: "Suzanne Collins",
@@ -90,6 +102,7 @@ const books: Book[] = [
     genre: "Fiction",
   },
   {
+    id: generateRandomId(),
     isFeatured: false,
     name: "The Alchemist",
     author: "Paulo Coelho",
@@ -100,6 +113,7 @@ const books: Book[] = [
     genre: "Fiction",
   },
   {
+    id: generateRandomId(),
     isFeatured: false,
     name: "The Shining",
     author: "Stephen King",
@@ -111,6 +125,7 @@ const books: Book[] = [
     genre: "Horror",
   },
   {
+    id: generateRandomId(),
     isFeatured: false,
     name: "Brave New World",
     author: "Aldous Huxley",
@@ -122,6 +137,7 @@ const books: Book[] = [
     genre: "Fiction",
   },
   {
+    id: generateRandomId(),
     isFeatured: false,
     name: "The Lord of the Rings",
     author: "J.R.R. Tolkien",
@@ -133,6 +149,7 @@ const books: Book[] = [
     genre: "Fantasy",
   },
   {
+    id: generateRandomId(),
     isFeatured: false,
     name: "Jane Eyre",
     author: "Charlotte Brontë",
@@ -143,6 +160,7 @@ const books: Book[] = [
     genre: "Fiction",
   },
   {
+    id: generateRandomId(),
     isFeatured: false,
     name: "The Da Vinci Code",
     author: "Dan Brown",
@@ -154,6 +172,7 @@ const books: Book[] = [
     genre: "Thriller",
   },
   {
+    id: generateRandomId(),
     isFeatured: false,
     name: "Moby-Dick",
     author: "Herman Melville",
@@ -165,6 +184,7 @@ const books: Book[] = [
     genre: "Adventure",
   },
   {
+    id: generateRandomId(),
     isFeatured: false,
     name: "The Road",
     author: "Cormac McCarthy",
@@ -176,6 +196,7 @@ const books: Book[] = [
     genre: "Fiction",
   },
   {
+    id: generateRandomId(),
     isFeatured: false,
     name: "The Chronicles of Narnia",
     author: "C.S. Lewis",
@@ -187,6 +208,7 @@ const books: Book[] = [
     genre: "Fantasy",
   },
   {
+    id: generateRandomId(),
     isFeatured: false,
     name: "One Hundred Years of Solitude",
     author: "Gabriel García Márquez",
@@ -198,6 +220,7 @@ const books: Book[] = [
     genre: "Realism",
   },
   {
+    id: generateRandomId(),
     isFeatured: false,
     name: "The Road Less Traveled",
     author: "M. Scott Peck",
@@ -209,6 +232,7 @@ const books: Book[] = [
     genre: "Self-Help",
   },
   {
+    id: generateRandomId(),
     isFeatured: false,
     name: "The Martian",
     author: "Andy Weir",
@@ -220,6 +244,7 @@ const books: Book[] = [
     genre: "Fiction",
   },
   {
+    id: generateRandomId(),
     isFeatured: false,
     name: "Dune",
     author: "Frank Herbert",
@@ -231,6 +256,7 @@ const books: Book[] = [
     genre: "Fiction",
   },
   {
+    id: generateRandomId(),
     isFeatured: false,
     name: "The Odyssey",
     author: "Homer",

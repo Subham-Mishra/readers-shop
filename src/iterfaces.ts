@@ -1,4 +1,5 @@
 export interface Book {
+  id: string;
   isFeatured: boolean;
   name: string;
   author: string;

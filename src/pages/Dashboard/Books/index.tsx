@@ -7,6 +7,10 @@ const BooksPage: React.FC = () => {
   const [genreFilter, setGenreFilter] = useState<string | null>(null);
   const [authorFilter, setAuthorFilter] = useState<string | null>(null);
 
+  const distinctGenres = [...new Set(books.map((book) => book.genre))];
+
+  const distinctAuthors = [...new Set(books.map((book) => book.author))];
+
   // Filtered books based on selected filters
   const filteredBooks = books.filter((book) => {
     if (genreFilter && book.genre !== genreFilter) {
@@ -19,7 +23,7 @@ const BooksPage: React.FC = () => {
   });
 
   return (
-    <div className="py-4 px-12 bg-orange-300">
+    <div className="py-4 px-12 bg-orange-300 h-[calc(100vh-4rem)] overflow-y-auto">
       <div className="flex items-center justify-between mb-4">
         <h1 className="text-3xl font-semibold">Available Books</h1>
         <div className="flex space-x-2">
@@ -32,8 +36,11 @@ const BooksPage: React.FC = () => {
             value={genreFilter || ""}
             onChange={(e) => setGenreFilter(e.target.value || null)}
           >
-            <option value="">Filter by Genre</option>
-            {/* Add genre options dynamically */}
+            {distinctGenres.map((genre, index) => (
+              <option value={genre} key={index}>
+                {genre}
+              </option>
+            ))}
           </select>
 
           <label htmlFor="authorFilter" className="hidden">
@@ -45,8 +52,11 @@ const BooksPage: React.FC = () => {
             value={authorFilter || ""}
             onChange={(e) => setAuthorFilter(e.target.value || null)}
           >
-            <option value="">Filter by Author</option>
-            {/* Add author options dynamically */}
+            {distinctAuthors.map((author, index) => (
+              <option value={author} key={index}>
+                {author}
+              </option>
+            ))}
           </select>
 
           <button
