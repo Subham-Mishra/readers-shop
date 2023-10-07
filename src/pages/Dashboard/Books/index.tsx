@@ -1,11 +1,23 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Book from "~/components/book";
 import books from "~/data/books";
+import { useSearchParams } from "react-router-dom";
 
 const BooksPage: React.FC = () => {
   // State for filtering
   const [genreFilter, setGenreFilter] = useState<string | null>(null);
   const [authorFilter, setAuthorFilter] = useState<string | null>(null);
+
+  const [searchParameters] = useSearchParams();
+  const filterByAuthor = searchParameters.get("filterByAuthor") || "";
+
+  useEffect(() => {
+    if (filterByAuthor) {
+      setAuthorFilter(filterByAuthor);
+    } else {
+      setAuthorFilter(null);
+    }
+  }, [filterByAuthor]);
 
   const distinctGenres = [...new Set(books.map((book) => book.genre))];
 

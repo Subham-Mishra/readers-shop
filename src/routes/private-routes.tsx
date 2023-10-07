@@ -1,5 +1,6 @@
 import type { RouteObject } from "react-router-dom";
 import Dashboard from "~/pages/Dashboard";
+import AuthorsPage from "~/pages/Dashboard/Authors";
 import BooksPage from "~/pages/Dashboard/Books";
 import HomePage from "~/pages/Dashboard/Home";
 
@@ -22,7 +23,7 @@ export const privateRoutes: Array<RouteObject> = [
       },
       {
         path: "authors",
-        element: <h1>Authors</h1>,
+        element: <AuthorsPage />,
       },
       {
         path: "cart",
