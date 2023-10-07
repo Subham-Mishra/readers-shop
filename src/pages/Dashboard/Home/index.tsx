@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import { Link } from "react-router-dom";
 import books from "~/data/books.ts";
-import { Book } from "~/iterfaces";
+import type { Book } from "~/iterfaces";
 
 const HomePage: React.FC = () => {
   const [featuredBook, setFeaturedBook] = React.useState<Book>();

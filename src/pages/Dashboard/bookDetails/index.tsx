@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Book } from "~/iterfaces";
+import type { Book } from "~/iterfaces";
 import { FaCartPlus } from "react-icons/fa";
 import { useParams } from "react-router-dom";
 import books from "~/data/books";
@@ -7,8 +7,8 @@ import { useShoppingCart } from "~/hooks/useCart";
 
 const BookDetails: React.FC = () => {
   const [selectedBook, setSelectedBook] = useState<Book>();
-  let { bookId } = useParams();
-  const { cart, addToCart, isBookInCart } = useShoppingCart();
+  const { bookId } = useParams();
+  const { addToCart, isBookInCart } = useShoppingCart();
 
   useEffect(() => {
     if (bookId) {

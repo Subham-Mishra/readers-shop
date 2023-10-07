@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import type React from "react";
+import { useEffect, useState } from "react";
 import Book from "~/components/book";
 import books from "~/data/books";
 import { useSearchParams } from "react-router-dom";
@@ -46,7 +47,9 @@ const BooksPage: React.FC = () => {
             id="genreFilter"
             className="border p-2 rounded"
             value={genreFilter || ""}
-            onChange={(e) => setGenreFilter(e.target.value || null)}
+            onChange={(event) => {
+              setGenreFilter(event.target.value || null);
+            }}
           >
             {distinctGenres.map((genre, index) => (
               <option value={genre} key={index}>
@@ -62,7 +65,9 @@ const BooksPage: React.FC = () => {
             id="authorFilter"
             className="border p-2 rounded"
             value={authorFilter || ""}
-            onChange={(e) => setAuthorFilter(e.target.value || null)}
+            onChange={(event) => {
+              setAuthorFilter(event.target.value || null);
+            }}
           >
             {distinctAuthors.map((author, index) => (
               <option value={author} key={index}>

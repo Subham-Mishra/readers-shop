@@ -1,5 +1,5 @@
-import React, { createContext, useContext, useState } from "react";
-import { CartItem } from "~/iterfaces";
+import { createContext, useContext, useState } from "react";
+import type { CartItem } from "~/iterfaces";
 import { findBookById } from "~/utils";
 
 // Define a context for the shopping cart
@@ -9,34 +9,34 @@ const ShoppingCartContext = createContext<any>(null);
 export const ShoppingCartProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
-  const [cart, setCart] = useState<CartItem[]>([]);
+  const [cart, setCart] = useState<Array<CartItem>>([]);
 
   const isBookInCart = (bookId: string) =>
     cart.find((item) => item.bookId === bookId);
 
   const addToCart = (bookId: string) => {
-    setCart((prevCart) => {
+    setCart((previousCart) => {
       const existingItem = isBookInCart(bookId);
 
-      if (existingItem) {
-        return prevCart.map((item) =>
-          item.bookId === bookId
-            ? { ...item, quantity: item.quantity + 1 }
-            : item
-        );
-      } else {
-        return [...prevCart, { bookId, quantity: 1 }];
-      }
+      return existingItem
+        ? previousCart.map((item) =>
+            item.bookId === bookId
+              ? { ...item, quantity: item.quantity + 1 }
+              : item
+          )
+        : [...previousCart, { bookId, quantity: 1 }];
     });
   };
 
   const removeFromCart = (bookId: string) => {
-    setCart((prevCart) => prevCart.filter((item) => item.bookId !== bookId));
+    setCart((previousCart) =>
+      previousCart.filter((item) => item.bookId !== bookId)
+    );
   };
 
   const changeQuantity = (bookId: string, newQuantity: number) => {
-    setCart((prevCart) =>
-      prevCart.map((item) =>
+    setCart((previousCart) =>
+      previousCart.map((item) =>
         item.bookId === bookId ? { ...item, quantity: newQuantity } : item
       )
     );
@@ -69,7 +69,7 @@ export const ShoppingCartProvider: React.FC<{ children: React.ReactNode }> = ({
 };
 
 // Custom hook to access the shopping cart
-export const useShoppingCart = () => {
+export const useShoppingCart = (): any => {
   const context = useContext(ShoppingCartContext);
   if (!context) {
     throw new Error(

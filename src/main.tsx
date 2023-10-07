@@ -4,10 +4,10 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { ErrorBoundary } from "react-error-boundary";
 import { Toaster } from "react-hot-toast";
-import App from "./App.tsx";
-import ErrorPage from "./pages/errorPage/index.tsx";
-import "./styles/index.css";
-import "./styles/tailwind.css";
+import App from "~/App.tsx";
+import "~/styles/index.css";
+import "~/styles/tailwind.css";
+import ErrorPage from "~/pages/errorPage/index.tsx";
 
 const rootElement = document.querySelector("#root") as Element;
 if (!rootElement.innerHTML) {

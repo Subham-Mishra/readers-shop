@@ -4,7 +4,7 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import { Link, useNavigate } from "react-router-dom";
 import { ACCESS_TOKEN_KEY, ID, ROLE, USER } from "~/lib/constants";
 
-const Navbar = () => {
+const Navbar = (): JSX.Element => {
   const navigate = useNavigate();
 
   const handleLogout = (): void => {

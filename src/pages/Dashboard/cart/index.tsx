@@ -1,13 +1,11 @@
 import { FaPlusSquare, FaTrash } from "react-icons/fa";
 import { useShoppingCart } from "~/hooks/useCart";
-import { CartItem } from "~/iterfaces";
+import type { CartItem } from "~/iterfaces";
 import { findBookById } from "~/utils";
 
 const CartPage: React.FC = () => {
   const { cart, removeFromCart, getTotalPrice, changeQuantity } =
     useShoppingCart();
-
-  console.log("as");
 
   return (
     <div className="h-[calc(100vh-4rem)] p-4 bg-orange-400">

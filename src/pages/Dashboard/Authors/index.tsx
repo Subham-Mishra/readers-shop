@@ -1,4 +1,5 @@
-import React, { Fragment } from "react";
+import type React from "react";
+import { Fragment } from "react";
 import Author from "~/components/author";
 import books from "~/data/books";
 
