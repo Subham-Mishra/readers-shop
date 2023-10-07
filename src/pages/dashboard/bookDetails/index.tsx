@@ -23,8 +23,16 @@ const BookDetails: React.FC = () => {
 
   if (!selectedBook) return <></>;
 
-  const { id, coverImageLink, name, details, author, genre, publicationDate } =
-    selectedBook;
+  const {
+    id,
+    coverImageLink,
+    name,
+    details,
+    author,
+    genre,
+    price,
+    publicationDate,
+  } = selectedBook;
 
   return (
     <div className="h-[calc(100vh-4rem)] p-4 bg-orange-400">
@@ -35,6 +43,7 @@ const BookDetails: React.FC = () => {
         <div className="w-1/2">
           <h1 className="text-2xl font-semibold mb-2">{name}</h1>
           <p className="text-gray-800 mb-4">{author}</p>
+          <p className="text-gray-800 mb-4">Rs. {price}</p>
           <p className="mb-4">{details}</p>
           <p>Genre: {genre}</p>
           <p>Publication Date: {publicationDate}</p>
