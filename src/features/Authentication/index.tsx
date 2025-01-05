@@ -11,7 +11,7 @@ const handleLogin = (): void => {
 const AuthPage: React.FC = (): JSX.Element => {
   return (
     <div className="grid h-screen grid-cols-2">
-      <section className="grid place-content-center gap-y-8 bg-orange-400 text-white">
+      <section className="grid place-content-center gap-y-8 bg-slate-700 text-white">
         <p className="text-center text-xl font-medium leading-7">
           Readers shop
         </p>

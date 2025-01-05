@@ -35,15 +35,20 @@ const BookDetails: React.FC = () => {
   } = selectedBook;
 
   return (
-    <div className="h-[calc(100vh-4rem)] p-4 bg-orange-400">
-      <div className="max-w-3xl mx-auto flex space-x-4">
+    <div className="h-[calc(100vh-4rem)] p-4 bg-slate-700">
+      <div className="max-w-5xl mx-auto flex space-x-4 mt-16 gap-24">
         <div className="w-1/2">
-          <img src={coverImageLink} alt={name} className="w-full" />
+          <img
+            src={coverImageLink}
+            alt={name}
+            className="w-full hover:transform hover:scale-105 duration-300"
+            loading="lazy"
+          />
         </div>
-        <div className="w-1/2">
+        <div className="w-1/2 text-gray-200">
           <h1 className="text-2xl font-semibold mb-2">{name}</h1>
-          <p className="text-gray-800 mb-4">{author}</p>
-          <p className="text-gray-800 mb-4">Rs. {price}</p>
+          <p className="mb-4">{author}</p>
+          <p className="mb-4">Rs. {price}</p>
           <p className="mb-4">{details}</p>
           <p>Genre: {genre}</p>
           <p>Publication Date: {publicationDate}</p>

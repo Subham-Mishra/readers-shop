@@ -8,7 +8,7 @@ const CartPage: React.FC = () => {
     useShoppingCart();
 
   return (
-    <div className="h-[calc(100vh-4rem)] p-4 bg-orange-400">
+    <div className="h-[calc(100vh-4rem)] p-4 bg-slate-700 text-gray-200">
       <div className="max-w-3xl mx-auto">
         <h1 className="text-2xl font-semibold mb-4 ">Shopping Cart</h1>
         {cart.length === 0 ? (

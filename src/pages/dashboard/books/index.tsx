@@ -38,9 +38,11 @@ const BooksPage: React.FC = () => {
   });
 
   return (
-    <div className="py-4 px-12 bg-orange-400 h-[calc(100vh-4rem)] overflow-y-auto">
-      <div className="flex items-center justify-between mb-4">
-        <h1 className="text-3xl font-semibold">Available Books</h1>
+    <div className="py-4 px-12 bg-slate-700 h-[calc(100vh-4rem)] overflow-y-auto">
+      <div className="flex items-center justify-between mb-12 mt-4">
+        <h1 className="text-3xl font-semibold text-gray-200">
+          Available Books
+        </h1>
         <div className="flex space-x-2">
           {(!!genreFilter || !!authorFilter) && (
             <button
@@ -110,7 +112,7 @@ const BooksPage: React.FC = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-20">
         {filteredBooks.length > 0 ? (
           filteredBooks.map((book, index) => <Book key={index} {...book} />)
         ) : (

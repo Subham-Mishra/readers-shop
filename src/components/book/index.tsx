@@ -1,8 +1,8 @@
 import type React from "react";
 import { Link } from "react-router-dom";
-import { Book } from "~/iterfaces";
+import type { Book } from "~/iterfaces";
 
-const Book: React.FC<Book> = ({
+const BookItem: React.FC<Book> = ({
   id,
   name,
   author,
@@ -12,12 +12,13 @@ const Book: React.FC<Book> = ({
 }) => {
   return (
     <Link to={`/dashboard/books/${id}`} className="cursor-pointer">
-      <div className="bg-white h-96 p-4 rounded-lg border border-gray-300 shadow hover:shadow-lg">
-        <div className="mb-4">
+      <div className="bg-gray-200 h-128 p-4 rounded-lg border border-gray-300 shadow hover:shadow-lg hover:transform hover:scale-105 duration-300">
+        <div className="mb-8 text-center w-full flex flex-col justify-center items-center ">
           <img
             src={coverImageLink}
             alt="Book Cover"
             className="h-60 object-contain"
+            loading="lazy"
           />
         </div>
         <h2 className="text-lg font-semibold">{name}</h2>
@@ -29,4 +30,4 @@ const Book: React.FC<Book> = ({
   );
 };
 
-export default Book;
+export default BookItem;

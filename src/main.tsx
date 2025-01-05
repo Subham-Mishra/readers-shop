@@ -15,7 +15,7 @@ if (!rootElement.innerHTML) {
   root.render(
     <React.StrictMode>
       <ErrorBoundary FallbackComponent={ErrorPage}>
-        <Theme accentColor="orange">
+        <Theme accentColor="iris">
           <App />
           <Toaster position="bottom-center" />
         </Theme>

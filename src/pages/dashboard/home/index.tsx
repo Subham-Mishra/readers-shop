@@ -12,22 +12,27 @@ const HomePage: React.FC = () => {
   }, []);
 
   return (
-    <div className="bg-orange-400 h-[calc(100vh-4rem)] flex justify-between items-center">
+    <div className="bg-slate-700 h-[calc(100vh-4rem)] flex justify-between items-center">
       <div className="text-center pl-8">
-        <h1 className="text-4xl font-bold">Hola! Welcome to Readers Shop</h1>
-        <Link to="books" className="text-gray-700 flex gap-2 cursor-pointer">
+        <h1 className="text-4xl font-bold text-gray-200">
+          Hola! Welcome to Readers Shop
+        </h1>
+        <Link to="books" className="text-gray-300 flex gap-2 cursor-pointer">
           Discover your next great read with us{" "}
           <HiArrowNarrowRight className="h-6 w-5" />
         </Link>
       </div>
-      <div className="">
-        <h2 className="text-2xl font-semibold mb-4">Featured Book</h2>
-        <div className="bg-white py-4 px-8 rounded-l-3xl shadow-md flex items-center">
-          <div className="w-1/4">
+      <div className="w-[50%]">
+        <h2 className="text-2xl font-semibold mb-4 text-gray-200">
+          Featured Book
+        </h2>
+        <div className="bg-white py-4 px-8 rounded-l-3xl shadow-md flex items-center h-[42rem] gap-12">
+          <div className="w-2/4 ">
             <img
               src={featuredBook?.coverImageLink}
               alt="Featured Book Cover"
-              className="h-60"
+              loading="lazy"
+              className="h-129"
             />
           </div>
           <div className="w-3/4 px-4">

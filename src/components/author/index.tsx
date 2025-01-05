@@ -8,7 +8,7 @@ const Author: React.FC<{ author: string }> = ({ author }) => {
       to={`/dashboard/books?filterByAuthor=${author}`}
       className="cursor-pointer"
     >
-      <div className="bg-white h-16 w-80 p-4 flex items-center gap-2 rounded-lg border border-gray-300 shadow hover:shadow-lg">
+      <div className="bg-gray-200 hover:transform hover:scale-105 duration-300 h-16 w-80 p-4 flex items-center gap-2 rounded-lg border border-gray-300 shadow hover:shadow-lg">
         <HiMiniUserCircle className="h-6 w-6" />
         <h2 className="text-lg font-semibold">{author}</h2>
       </div>
